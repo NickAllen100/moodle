@@ -16,10 +16,10 @@ $CFG = new stdClass();
 
 $CFG->dbtype    = getenv('DATABASE_TYPE');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = $db["host"]
-$CFG->dbname    = $db["path"]
-$CFG->dbuser    = $db["user"]
-$CFG->dbpass    = $db["pass"]
+$CFG->dbhost    = $db["host"];
+$CFG->dbname    = $db["path"];
+$CFG->dbuser    = $db["user"];
+$CFG->dbpass    = $db["pass"];
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
