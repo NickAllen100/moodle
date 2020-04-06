@@ -27,6 +27,10 @@ $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
 
+foreach ($CFG as $key => $val){  
+    echo $key."==>".$val."\n";  
+}
+
 require_once(__DIR__ . '/lib/setup.php');
 
 // There is no php closing tag in this file,
