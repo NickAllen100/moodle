@@ -15,7 +15,7 @@ foreach ($db as $key => $val){
 $CFG = new stdClass();
 
 $CFG->dbtype    = getenv('DATABASE_TYPE');
-$CFG->dblibrary = 'native';
+$CFG->dblibrary = 'pgsql';
 $CFG->dbhost    = $db["host"];
 $CFG->dbname    = $db["path"];
 $CFG->dbuser    = $db["user"];
