@@ -4,18 +4,12 @@ unset($CFG);
 global $CFG;
 
 $db = parse_url(getenv("DATABASE_URL"));
-echo $db;
-foreach ($db as $key => $val){  
-    echo $key."==>".$val."\n";  
-} 
 $db["path"] = ltrim($db["path"], "/");
-foreach ($db as $key => $val){  
-    echo $key."==>".$val."\n";  
-} 
+
 $CFG = new stdClass();
 
 $CFG->dbtype    = getenv('DATABASE_TYPE');
-$CFG->dblibrary = 'pgsql';
+$CFG->dblibrary = getenv('DATABASE_LIB');
 $CFG->dbhost    = $db["host"];
 $CFG->dbname    = $db["path"];
 $CFG->dbuser    = $db["user"];
